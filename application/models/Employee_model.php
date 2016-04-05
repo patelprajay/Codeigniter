@@ -24,11 +24,25 @@ class employee_model extends CI_Model
 	function get_employee_record($empno)
 	{
 		$this->db->where('employee_no', $empno);
-        $this->db->from('tbl_employee');
-        $query = $this->db->get();
-        return $query->result();
+		$this->db->from('tbl_employee');
+		$query = $this->db->get();
+		return $query->result();
 	}
 	
+	/**
+	 * get employee detail with its department and designation
+	 * 
+	 * @return array
+	 */
+	
+	function get_employee_list()
+	{
+		$this->db->from('tbl_employee');
+		$this->db->join('tbl_department','tbl_employee.department_id = tbl_department.department_id');
+		$this->db->join('tbl_designation','tbl_employee.designation_id = tbl_designation.designation_id');
+		$query = $this->db->get();
+		return $query->result();
+	}
 	/**
 	 * get department table to populate the department name dropdown
 	 * 
