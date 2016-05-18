@@ -65,8 +65,8 @@ class Contactform extends CI_Controller
 			$config['protocol'] = 'smtp';
 			$config['smtp_host'] = 'ssl://smtp.sendgrid.net';
 			$config['smtp_port'] = '465';
-			$config['smtp_user'] = 'vihang.joshi'; // email id
-			$config['smtp_pass'] = 'fnw00t##'; // email password
+			$config['smtp_user'] = 'test'; // email id
+			$config['smtp_pass'] = 'test'; // email password
 			$config['mailtype'] = 'html';
 			$config['wordwrap'] = TRUE;
 			$config['charset'] = 'iso-8859-1';

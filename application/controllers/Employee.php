@@ -21,6 +21,7 @@ class Employee extends CI_Controller
 		$this->load->database();
 		$this->load->library('form_validation');
 		$this->load->model('employee_model');
+		$this->output->cache(60); // used to create the cache page
 	}
 	
 	/**
